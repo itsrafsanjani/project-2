@@ -1,9 +1,11 @@
 html {
-    height: 100%;
+    background-image: linear-gradient(#FC5E55, #FA4083);
 }
 
 body {
-    background-image: linear-gradient(#FC5E55, #FA4083);
+    background-image: url(images/image-lion-background.png);
+    background-repeat: no-repeat;
+    background-position: top center;
     font-size: 1.125rem;
     font-family: 'Roboto', sans-serif;
     color: white;
@@ -22,6 +24,7 @@ header {
     align-items: center;    
     padding-top: 20px;
     padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
 }
 
 nav a.mybutton {
@@ -31,7 +34,37 @@ nav a.mybutton {
 .navbutton {
     border: 1px solid white;
     font-family: 'Playfair Display', serif;
-    padding: 8px 20px;
+    padding: 11px 25px;
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.navbutton:hover .dropdown {
+    display: block;
+}
+
+.navbutton .dropdown .navbutton {
+    background-color: white;
+    height: 25px;
+    width: 140px;
+    margin-left: -40px;
+}
+
+.navbutton .dropdown .navbutton:hover {
+    background-color: #FC5E55;
+    transition-duration: 0.5ms;
+}
+
+
+.navbutton .dropdown a {
+    color: rgb(0, 0, 0);
 }
 
 main {
@@ -42,13 +75,20 @@ main {
 
 .mybutton {
     background-color: white;
-    color: #FA4083;
+    color: #FC5E55;
     font-family: 'Playfair Display', serif;
+    font-weight: bold;
     padding: 11px 25px;
     margin-top: 20px;
     display: inline-block;
     border-radius: 2px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.22);
+}
+
+.mybutton:hover {
+    background-color: rgb(255, 255, 65);
+    color: black;
+    font-weight: bold;
 }
 
 .cards {
@@ -134,4 +174,70 @@ p {
 a {
     color: white;
     text-decoration: none;
+}
+
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.tbox {
+    width: 47%;
+    padding: 50px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.tbox :last-child{
+    font-size: 0.8rem;
+}
+
+/* ----- Contact Us Style ----- */
+
+.main2 {
+    min-height: 300px;
+    padding-top: 50px;
+}
+
+.textwrapper {
+    padding-bottom: 20px;
+}
+
+input[type=text], input[type=email], textarea {
+    padding: 12px 20px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    box-sizing: border-box;
+}
+
+.newline {
+    display: block;
+    padding-bottom: 10px;
+}
+
+.margin-right {
+    margin-right: 25px;
+}
+
+.mybutton2 {
+    background-color: white;
+    color: #FC5E55;
+    font-family: 'Playfair Display', serif;
+    padding: 11px 25px;
+    border: none;
+    margin: 20px 0px 40px 0px;
+    font-weight: bold;
+    width: 130px;
+    height: 40px;
+    border-radius: 2px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.22);
+}
+
+.mybutton2:hover {
+    background-color: rgb(255, 255, 65);
+    color: black;
 }
